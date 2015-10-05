@@ -14,7 +14,8 @@ def solveNumber(query):
 	possibleLocation = []
 	## tracks queryIndex
 	queryIndex = 0;
-	processedQuery = query.lower().replace('hundred and', 'hundred').replace(' ', '_')
+	processedQuery = query.lower().replace('hundred and', 'hundred').replace('thousand and', 'thousand').replace('lakh and', 'lakh')
+	.replace('crore and', 'crore').replace('million and', 'million').replace('billion and', 'billion').replace(' ', '_')
 	
 	rawData = query.lower().replace('hundred and', 'hundred').split()
 	
